@@ -35,8 +35,8 @@ const update = async () => {
         </div>`;
       return html`<div class="server">
         <h2>${data.name} (${data.server})</h2>
-        <p>Members: ${data.count}</p>
-        <p>Online: ${data.count_online}</p>
+        <p>Members: ${data.count.toLocaleString()}</p>
+        <p>Online: ${data.count_online.toLocaleString()}</p>
         <button @click=${() => remove(data.server)}>Remove</button>
       </div>`;
     }),
